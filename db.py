@@ -3,9 +3,9 @@ import mysql.connector
 
 def get_connection():
     return mysql.connector.connect(
-        host=st.secrets["reseau.proxy.rlwy.net"],
-        port=int(st.secrets[ "49113"]),
-        user=st.secrets["root"],
-        password=st.secrets["LEyhLpcGoxbCpyvRlbphPiCTgxFHHzDD"],
-        database=st.secrets["railway"]
+        host=st.secrets["MYSQLHOST"],
+        port=int(st.secrets["MYSQLPORT"]),
+        user=st.secrets["MYSQLUSER"],
+        password=st.secrets["MYSQLPASSWORD"],
+        database=st.secrets["MYSQLDATABASE"]
     )
